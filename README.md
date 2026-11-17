@@ -1,7 +1,5 @@
 # DynaHive
 
-Adaptive honeynet prototype: **observe → plan → build environment → generate guidance paths → review → deploy → freeze exposed facts**.
-
 This package is the core system used in the paper experiments. It does not include experiment traces, result tables, or attacker-engine workloads.
 
 ## Layout
