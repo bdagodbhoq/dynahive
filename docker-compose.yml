@@ -1,0 +1,17 @@
+services:
+  controller:
+    build: .
+    environment:
+      DYNHIVE_BASE_URL: ${DYNHIVE_BASE_URL:-}
+      DYNHIVE_API_KEY: ${DYNHIVE_API_KEY:-}
+      DYNHIVE_MODEL: ${DYNHIVE_MODEL:-mock}
+    volumes:
+      - ./work:/app/work
+    networks:
+      - decoy
+    command: ["python", "scripts/run_mock.py"]
+
+networks:
+  decoy:
+    driver: bridge
+    internal: true

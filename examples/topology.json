@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "name": "minimal-three-host-decoy",
+    "description": "Entry, application, and archive hosts for the closed-loop demo."
+  },
+  "network": {
+    "subnet": "10.77.0.0/24",
+    "attacker_ip": "10.77.0.250"
+  },
+  "switches": [
+    {"id": "edge-sw"},
+    {"id": "app-sw"}
+  ],
+  "hosts": [
+    {"name": "bastion-01", "role": "bastion", "connect": "edge-sw", "ip": "10.77.0.10"},
+    {"name": "app-01", "role": "application", "connect": "app-sw", "ip": "10.77.0.20"},
+    {"name": "fileserver-01", "role": "fileserver", "connect": "app-sw", "ip": "10.77.0.30"}
+  ],
+  "links": [
+    {"endpoints": ["edge-sw", "app-sw"]},
+    {"endpoints": ["edge-sw", "bastion-01"]},
+    {"endpoints": ["app-sw", "app-01"]},
+    {"endpoints": ["app-sw", "fileserver-01"]}
+  ]
+}
