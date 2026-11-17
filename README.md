@@ -55,15 +55,3 @@ The compose network is `internal: true`. The controller does not publish managem
 ## Reset
 
 Delete `work/` and rerun `scripts/run_mock.py`.
-
-## Scope
-
-Implemented: three-host decoy, SSH-oriented World/VFS, Perception, Planner task assignment, Environment Agent, Guidance Algorithm 1 (`K=6`, `b=3`, visible-prefix assessor), deterministic FeasibleWholeChain, Review checks with repair budget `R=2` and deploy blocking, deploy compile, progressive freeze, mock mode, paper-length runtime prompts under `prompts/*.txt`.
-
-Simplified: live SSH/Mininet data-plane still uses the World/VFS executor rather than per-namespace containers in this tree. Optional TAPAS weight files are not shipped; stage perception uses the disclosed local ATT&CK mapping.
-
-Interaction transcripts are in `logs/` (commands and stdout only).
-
-Not included: experiment result archives, scoring tables, baseline honeypot engines, paper sources, author identities.
-
-See `MODULE_MAP.md` for paper-to-code names.
