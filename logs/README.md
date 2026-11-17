@@ -1,6 +1,6 @@
 # Interaction logs
 
-Command/output transcripts only. No scores, timings, or adjudication fields.
+Command/output transcripts only.
 
 ## `human/`
 
@@ -10,8 +10,8 @@ Command/output transcripts only. No scores, timings, or adjudication fields.
 
 ## `llm-agents/`
 
-RQ1 LLM attackers (PentestGPT, AutoAttacker, AutoPT, PenHeal) × 5 surfaces × 30 seeds.
+RQ1 LLM attackers (PentestGPT, AutoAttacker, AutoPT, PenHeal) × 4 surfaces × 30 seeds.
 
 `logs/llm-agents/<attacker>/<surface>/seed00.md` … `seed29.md`
 
-Surfaces: DynaHive, HoneyGPT, HoneyLLM, LLM-THP, DecoyPot.
+Surfaces: DynaHive, HoneyGPT, HoneyLLM, LLM-THP.
